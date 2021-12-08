@@ -16,7 +16,7 @@ def r1():
         if guess == Card(self.color):
             print(win)
             result1 = True
-        if guess != Card(self.color):
+        elif guess != Card(self.color):
             print(lose)
     else:
         print('Invalid input. You must enter "red" or "black".')
