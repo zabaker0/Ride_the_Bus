@@ -39,7 +39,7 @@ def main():
 #user_input1 = input('Enter anything to continue. Enter "END" to stop playing: ')
 #while user_input1 != 'END' and result4 == False:
 
-#calling round 1 function
+#calling round 2 function
     print("Let's play round 2! \n")
     round2()
     
