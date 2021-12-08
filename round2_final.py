@@ -44,3 +44,40 @@ def main():
     round2()
     
 main()
+
+'''
+def round2():
+    
+    result2 = False
+    
+    guess = input('Round 2: \nGuess wether the card will be "higher" or "lower": ')
+    
+    if guess == "higher" or guess == "lower":
+        
+        if guess == "higher":
+            
+            if Card_2(self.value) >= Card_1(self.value):
+                
+                print(win)
+                
+                result2 = True
+            
+            elif Card_2(self.value) <= Card_1(self.value):
+            
+                print(lose)
+               
+        elif guess == "lower":
+            
+            if Card_2(self.value) >= Card_1(self.value):
+                
+                print(lose)
+                
+            elif Card_2(self.value) <= Card_1(self.value):
+                
+                print(win)
+                
+                result2 = True
+                
+    else:
+        print('Invalid input. You must enter "higher" or "lower".')
+'''
