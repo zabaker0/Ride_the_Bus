@@ -56,7 +56,7 @@ def round2():
         
         if guess == "higher":
             
-            if Card_2(self.value) >= Card_1(self.value):
+            if Card_2(self.value) > Card_1(self.value):
                 
                 print(win)
                 
@@ -72,7 +72,7 @@ def round2():
                 
                 print(lose)
                 
-            elif Card_2(self.value) <= Card_1(self.value):
+            elif Card_2(self.value) < Card_1(self.value):
                 
                 print(win)
                 
