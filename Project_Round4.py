@@ -6,7 +6,6 @@
 #Round 4
 
 #this is to show the players hand, ignore if N/A
-
 for p in range(players):
     print('{player_list.name}, its your turn')
     
@@ -22,11 +21,11 @@ for p in range(players):
     #guessing the suit
 
     if suit_guess in ['yes','no']:
-        if in_hand == True and prediction == 'yes'
-        if in_hand == False and prediction == 'no':
+        if in_hand ==  'yes':
+        if in_hand == 'no':
             print('You win!')
         else:
-            print('You lost, take a drink!')
+            print('You lost!')
     else:
         print('What you entered was not valid...')
     
