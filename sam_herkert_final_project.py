@@ -6,6 +6,7 @@ Collaborator: Zach Baker
 """
 
 from random import *
+from deck import*
 
 #Round 1: Red or Black?
 def r1():
