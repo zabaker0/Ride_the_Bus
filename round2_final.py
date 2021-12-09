@@ -81,3 +81,27 @@ def round2():
     else:
         print('Invalid input. You must enter "higher" or "lower".')
 '''
+
+
+#Round 3 
+
+for p in range(num_p):
+    print(f"\n\n{p_name[p].name}, it is your turn now")
+    
+    print('Your cards are ')
+    p_name[p].showHand()
+
+    guess3 = input("Guess: Is the next card inside or outside? ").lower()
+    
+    p_name[p].draw(deck)
+    print("You drew \n")
+    p_name[p].showHand()
+
+    if guess3 inside ['in', 'out']:
+        if inside == True and prediction == "in"\
+        or outside == True and prediction == "out":
+            print(win)
+        else:
+            print(lose)
+    else:
+        print(not_valid)
