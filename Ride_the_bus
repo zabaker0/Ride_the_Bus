@@ -5,7 +5,7 @@ from deck import *
 #Round 1: Red or Black?
 def r1():
     result1 = False
-    guess = input('Round 1: \nGuess wether the card will be "red" or "black": ')
+    guess = input('Round 1: \nGuess wether the card will be "red" or "black": ').lower()
     if guess == "red" or guess == "black":
         if guess == Card(self.color):
             print(win)
@@ -55,7 +55,7 @@ def round2():
     
     result2 = False
     
-    guess = input('Round 2: \nGuess wether the card will be "higher" or "lower": ')
+    guess = input('Round 2: \nGuess wether the card will be "higher" or "lower": ').lower()
     
     if guess == "higher" or guess == "lower":
         
@@ -123,7 +123,7 @@ def round4():
         print('This is your hand')
         player_list.show_hand()
     
-        suit_guess = input('Does the suit match any cards in your hand? (yes or no)')
+        suit_guess = input('Does the suit match any cards in your hand? (yes or no)').lower()
     
         player_list.draw(deck)
         print('You drew \n')
