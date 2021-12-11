@@ -17,7 +17,7 @@ class Deck:
         self.build()
 
     def build(self):
-        for s in ["Spades", "Clubs", "Diamonds", "Hearts"]:
+        for s in ["Spades ♠", "Clubs ♣", "Diamonds ♦", "Hearts ♥"]:
             for v in range(1, 14):
                 self.cards.append(Card(s, v))
 
