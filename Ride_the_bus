@@ -106,7 +106,7 @@ def round3():
         if guess3 inside ['in', 'out']:
             if inside == True and prediction == "in"\
             or outside == True and prediction == "out":
-            print(win)
+                print(win)
             else:
                 print(lose)
         else:
