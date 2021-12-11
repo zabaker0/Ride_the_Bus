@@ -35,5 +35,107 @@ def main():
 #calling round 1 function
     print("Let's start! \n")
     r1()
-    
+
+#calling round 2 function
+    print("Let's play round 2! \n")
+    round2()
+
+#calling round 3 function
+    print("Let's play round 3! \n")
+    round3()
+
+#calling round 4 function
+    print("Let's play round 4! \n")
+    round4()
+
 main()
+
+
+def round2():
+    
+    result2 = False
+    
+    guess = input('Round 2: \nGuess wether the card will be "higher" or "lower": ')
+    
+    if guess == "higher" or guess == "lower":
+        
+        if guess == "higher":
+            
+            if Card_2(self.value) >= Card_1(self.value):
+                
+                print(win)
+                
+                result2 = True
+            
+            elif Card_2(self.value) < Card_1(self.value):
+            
+                print(lose)
+               
+        elif guess == "lower":
+            
+            if Card_2(self.value) > Card_1(self.value):
+                
+                print(lose)
+                
+            elif Card_2(self.value) <= Card_1(self.value):
+                
+                print(win)
+                
+                result2 = True
+                
+    else:
+        print('Invalid input. You must enter "higher" or "lower".')
+
+
+
+#Round 3 
+
+def round3():
+  for p in range(num_p):
+     print(f"\n\n{p_name[p].name}, it is your turn now")
+    
+    print('Your cards are ')
+    p_name[p].showHand()
+
+    guess3 = input("Guess: Is the next card inside or outside? ").lower()
+    
+    p_name[p].draw(deck)
+    print("You drew \n")
+    p_name[p].showHand()
+
+    if guess3 inside ['in', 'out']:
+        if inside == True and prediction == "in"\
+        or outside == True and prediction == "out":
+            print(win)
+        else:
+            print(lose)
+    else:
+        print(not_valid)
+        
+
+#Round 4
+
+def round4():
+#this is to show the players hand, ignore if N/A
+for p in range(players):
+    print('{player_list.name}, its your turn')
+    
+    print('This is your hand')
+    player_list.show_hand()
+    
+    suit_guess = input('Does the suit match any cards in your hand? (yes or no)')
+    
+    player_list.draw(deck)
+    print('You drew \n')
+    player_list.show_hand()
+    
+    #guessing the suit
+
+    if suit_guess in ['yes','no']:
+        if in_hand ==  'yes':
+        if in_hand == 'no':
+            print('You win!')
+        else:
+            print('You lost!')
+    else:
+        print('What you entered was not valid...')
