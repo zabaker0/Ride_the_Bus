@@ -112,7 +112,21 @@ def round3():
         
 
 #Round 4
-
+#Edited Round 4 -------------------------------------------------------------------------------------------------------------------
+def r4():
+    result3 = False
+    
+    print('Round 4: The player must guess the suit of a flipped card ("spade", "heart", "clubs", or "diamond"). \n')
+    guess4 = input("Type 'Spade' 'Heart' 'Club' 'Diamond: " ).lower()
+    
+    if guess4 == 'spade' or guess4 == 'heart' or 'club' or 'diamond':
+        if guess4 == Card(self.suit):
+            print('Congrats you have won the game')
+        elif guess4 ! = Card(self.suit):
+            print ('You Lose')
+        else:
+            print('Invalid input. You must enter one of the suits showed above')
+# End of edit------------------------------------------------------------------------------------------------------------------------------
 def round4():
 #this is to show the players hand, ignore if N/A
     for p in range(players):
