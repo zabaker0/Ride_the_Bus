@@ -91,51 +91,52 @@ def round2():
 #Round 3 
 
 def round3():
-  for p in range(num_p):
-     print(f"\n\n{p_name[p].name}, it is your turn now")
+    for p in range(num_p):
+        print(f"\n\n{p_name[p].name}, it is your turn now")
     
-    print('Your cards are ')
-    p_name[p].showHand()
+        print('Your cards are ')
+        p_name[p].showHand()
 
-    guess3 = input("Guess: Is the next card inside or outside? ").lower()
+        guess3 = input("Guess: Is the next card inside or outside? ").lower()
     
-    p_name[p].draw(deck)
-    print("You drew \n")
-    p_name[p].showHand()
+        p_name[p].draw(deck)
+        print("You drew \n")
+        p_name[p].showHand()
 
-    if guess3 inside ['in', 'out']:
-        if inside == True and prediction == "in"\
-        or outside == True and prediction == "out":
+        if guess3 inside ['in', 'out']:
+            if inside == True and prediction == "in"\
+            or outside == True and prediction == "out":
             print(win)
+            else:
+                print(lose)
         else:
-            print(lose)
-    else:
-        print(not_valid)
+            print(not_valid)
         
 
 #Round 4
 
 def round4():
 #this is to show the players hand, ignore if N/A
-for p in range(players):
-    print('{player_list.name}, its your turn')
+    for p in range(players):
+        print('{player_list.name}, its your turn')
     
-    print('This is your hand')
-    player_list.show_hand()
+        print('This is your hand')
+        player_list.show_hand()
     
-    suit_guess = input('Does the suit match any cards in your hand? (yes or no)')
+        suit_guess = input('Does the suit match any cards in your hand? (yes or no)')
     
-    player_list.draw(deck)
-    print('You drew \n')
-    player_list.show_hand()
+        player_list.draw(deck)
+        print('You drew \n')
+        player_list.show_hand()
     
     #guessing the suit
 
-    if suit_guess in ['yes','no']:
-        if in_hand ==  'yes':
-        if in_hand == 'no':
-            print('You win!')
+        if suit_guess in ['yes','no']:
+            if in_hand ==  'yes':
+            if in_hand == 'no':
+                print('You win!')
+            else:
+                print('You lost!')
         else:
-            print('You lost!')
-    else:
-        print('What you entered was not valid...')
+            print('What you entered was not valid...')
+            
