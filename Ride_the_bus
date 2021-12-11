@@ -103,7 +103,7 @@ def round3():
         print("You drew \n")
         p_name[p].showHand()
 
-        if guess3 inside ['in', 'out']:
+        if guess3 in ['in', 'out']:
             if inside == True and prediction == "in"\
             or outside == True and prediction == "out":
                 print(win)
