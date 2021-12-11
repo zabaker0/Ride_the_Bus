@@ -48,8 +48,6 @@ def main():
     print("Let's play round 4! \n")
     round4()
 
-main()
-
 
 def round2():
     
@@ -140,3 +138,5 @@ def round4():
         else:
             print('What you entered was not valid...')
             
+
+main()
