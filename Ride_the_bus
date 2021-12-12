@@ -135,7 +135,7 @@ def r4():
         if guess4 == Card(self.suit):
             print('You guessed correctly.')
             result4 = True
-        elif guess4 ! = Card(self.suit):
+        elif guess4 != Card(self.suit):
             print (lose)
         else:
             print('Invalid input. You must enter one of the suits showed above')
