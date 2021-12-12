@@ -99,6 +99,7 @@ def round2():
 #Round 3 
 
 def round3():
+    result3 = False
     for p in range(num_p):
         print(f"\n\n{p_name[p].name}, it is your turn now")
     
@@ -115,6 +116,7 @@ def round3():
             if inside == True and prediction == "in"\
             or outside == True and prediction == "out":
                 print(win)
+                result3 = True
             else:
                 print(lose)
         else:
@@ -124,16 +126,17 @@ def round3():
 #Round 4
 #Edited Round 4 -------------------------------------------------------------------------------------------------------------------
 def r4():
-    result3 = False
+    result4 = False
     
     print('Round 4: The player must guess the suit of a flipped card ("spade", "heart", "clubs", or "diamond"). \n')
     guess4 = input("Type 'Spade' 'Heart' 'Club' 'Diamond: " ).lower()
     
     if guess4 == 'spade' or guess4 == 'heart' or 'club' or 'diamond':
         if guess4 == Card(self.suit):
-            print('Congrats you have won the game')
+            print('You guessed correctly.')
+            result4 = True
         elif guess4 ! = Card(self.suit):
-            print ('You Lose')
+            print (lose)
         else:
             print('Invalid input. You must enter one of the suits showed above')
 # End of edit------------------------------------------------------------------------------------------------------------------------------
