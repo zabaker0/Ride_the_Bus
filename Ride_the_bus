@@ -2,6 +2,9 @@
 from random import *
 from deck import *
 
+win = "Congrats! You guessed correctly. Move on to the next round!"
+lose = "You guessed wrong. Better luck next time!"
+
 #Round 1: Red or Black?
 def r1():
     result1 = False
@@ -26,8 +29,6 @@ def main():
     print('Round 3: The player must guess wether a flipped card will be "between" or "outside" the cards from round 1 and round 2. \n')
     print('Round 4: The player must guess the suit of a flipped card ("spade", "heart", "clubs", or "diamond"). \n')
     
-#win = "Congrats! You guessed correctly. Move on to the next round!"
-#lose = "You guessed wrong. Better luck next time!"
 
     result4 = False
     user_input1 = input('Enter anything to continue. Enter "END" to stop playing: ')
@@ -52,6 +53,10 @@ def main():
             print("Let's play round 4! \n")
             round4()
             
+        if result4 == True:
+            print("Congratulations! You've won the game!")
+        
+        user_input1 = input('Enter anything to continue. Enter "END" to stop playing: ')
 
 
 def round2():
