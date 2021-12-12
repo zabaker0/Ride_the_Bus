@@ -106,21 +106,21 @@ def round3():
         print('Your cards are ')
         p_name[p].showHand()
 
-        guess3 = input("Guess: Is the next card inside or outside? ").lower()
+        guess3 = input('Guess: Is the next card "inside" or "outside"? ').lower()
     
         p_name[p].draw(deck)
         print("You drew \n")
         p_name[p].showHand()
 
-        if guess3 in ['in', 'out']:
-            if inside == True and prediction == "in"\
-            or outside == True and prediction == "out":
+        if guess3 in ['inside', 'outside']:
+            if inside == True and prediction == "inside"\
+            or outside == True and prediction == "outside":
                 print(win)
                 result3 = True
             else:
                 print(lose)
         else:
-            print(not_valid)
+            print('Invalid input. Must input "inside" or "outside".')
         
 
 #Round 4
