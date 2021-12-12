@@ -29,24 +29,29 @@ def main():
 #win = "Congrats! You guessed correctly. Move on to the next round!"
 #lose = "You guessed wrong. Better luck next time!"
 
-#user_input1 = input('Enter anything to continue. Enter "END" to stop playing: ')
-#while user_input1 != 'END' and result4 == False:
+    result4 = False
+    user_input1 = input('Enter anything to continue. Enter "END" to stop playing: ')
+    while user_input1 != 'END' and result4 == False:
 
 #calling round 1 function
-    print("Let's start! \n")
-    r1()
+        print("Let's start! \n")
+        r1()
 
 #calling round 2 function
-    print("Let's play round 2! \n")
-    round2()
+        if result1 == True:
+            print("Let's play round 2! \n")
+            round2()
 
 #calling round 3 function
-    print("Let's play round 3! \n")
-    round3()
+        if result2 == True:
+            print("Let's play round 3! \n")
+            round3()
 
 #calling round 4 function
-    print("Let's play round 4! \n")
-    round4()
+        if result3 == True:
+            print("Let's play round 4! \n")
+            round4()
+            
 
 
 def round2():
