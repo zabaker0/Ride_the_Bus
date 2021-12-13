@@ -1,6 +1,6 @@
 
 from random import *
-from deck import *
+from Deck import *
 
 win = "Congrats! You guessed correctly. Move on to the next round!"
 lose = "You guessed wrong. Better luck next time!"
@@ -17,6 +17,8 @@ def r1():
             print(lose)
     else:
         print('Invalid input. You must enter "red" or "black".')
+    
+    return result1
 
 
 def main():
@@ -28,31 +30,34 @@ def main():
     print('Round 2: The player must guess wether a flipped card will be "higher" or "lower" than the card flipped in round 1. \n')
     print('Round 3: The player must guess wether a flipped card will be "between" or "outside" the cards from round 1 and round 2. \n')
     print('Round 4: The player must guess the suit of a flipped card ("spade", "heart", "clubs", or "diamond"). \n')
-    
 
+    result1 = False
+    result2 = False
+    result3 = False
     result4 = False
     user_input1 = input('Enter anything to continue. Enter "END" to stop playing: ')
+    
     while user_input1 != 'END' and result4 == False:
 
-#calling round 1 function
+        #calling round 1 function
         print("Let's start! \n")
-        r1()
+        result1 = r1()
 
-#calling round 2 function
+        #calling round 2 function
         if result1 == True:
             print("Let's play round 2! \n")
-            round2()
+            result2 = round2()
 
-#calling round 3 function
+        #calling round 3 function
         if result2 == True:
             print("Let's play round 3! \n")
-            round3()
+            result3 = round3()
 
-#calling round 4 function
+        #calling round 4 function
         if result3 == True:
             print("Let's play round 4! \n")
-            round4()
-            
+            result4 = r4()
+
         if result4 == True:
             print("Congratulations! You've won the game!")
         
@@ -93,6 +98,8 @@ def round2():
                 
     else:
         print('Invalid input. You must enter "higher" or "lower".')
+    
+    return result2
 
 
 
@@ -113,18 +120,19 @@ def round3():
         p_name[p].showHand()
 
         if guess3 in ['inside', 'outside']:
-            if inside == True and prediction == "inside"\
-            or outside == True and prediction == "outside":
+            if inside == True and guess3 == "inside"\
+            or outside == True and guess3 == "outside":
                 print(win)
                 result3 = True
             else:
                 print(lose)
         else:
             print('Invalid input. Must input "inside" or "outside".')
+            
+    return result3
         
 
 #Round 4
-#Edited Round 4 -------------------------------------------------------------------------------------------------------------------
 def r4():
     result4 = False
     
@@ -139,31 +147,8 @@ def r4():
             print (lose)
         else:
             print('Invalid input. You must enter one of the suits showed above')
-# End of edit------------------------------------------------------------------------------------------------------------------------------
-def round4():
-#this is to show the players hand, ignore if N/A
-    for p in range(players):
-        print('{player_list.name}, its your turn')
     
-        print('This is your hand')
-        player_list.show_hand()
-    
-        suit_guess = input('Does the suit match any cards in your hand? (yes or no)').lower()
-    
-        player_list.draw(deck)
-        print('You drew \n')
-        player_list.show_hand()
-    
-    #guessing the suit
+    return result4
 
-        if suit_guess in ['yes','no']:
-            if in_hand ==  'yes':
-            if in_hand == 'no':
-                print('You win!')
-            else:
-                print('You lost!')
-        else:
-            print('What you entered was not valid...')
-            
 
 main()
